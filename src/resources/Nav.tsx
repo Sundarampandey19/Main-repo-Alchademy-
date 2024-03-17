@@ -16,15 +16,15 @@ function Nav() {
         </div>
 
         <div className='  py-5 font-medium'>
-          <ul className='flex'>
+          <ul className='flex py-1'>
             <li className='px-6 hover:underline hover:text-[#FF5A1E]'>
-            <Link  href="#">Courses</Link>
+            {/* <Link  href="#">Courses</Link> */}
             </li>
             <li className='px-6 hover:underline hover:text-[#FF5A1E]'>
-            <Link  href="#">Features</Link>
+            <Link className='text-lg font-bold' href="/chat-llm">Chat-llm</Link>
             </li>
-            <li className='px-6 hover:underline hover:text-[#FF5A1E]'>
-            <Link  href="#">Dashboard</Link>
+            <li className='px-6  hover:underline hover:text-[#FF5A1E]'>
+            <Link className='text-lg font-bold '  href="/dashboard">Dashboard</Link>
             </li>
           </ul>
         </div>

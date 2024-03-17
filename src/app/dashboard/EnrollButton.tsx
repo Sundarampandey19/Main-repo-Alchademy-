@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { EnrollinCourse } from "@/app/dashboard/EnrollCourse";
 import { Course } from "@prisma/client";
 import { useState, useTransition } from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const EnrollButton = (course: Course) => {
     const [isPending, startTransition] = useTransition();
@@ -13,13 +15,24 @@ const EnrollButton = (course: Course) => {
   const id = course.id;
   return (
     <div>
-      <button
+      <Button asChild>
+  <Link href="/embed-video">Explore -> </Link>
+</Button>
+      
+    </div>
+  );
+};
+
+export default EnrollButton;
+
+{/* <button
         className="text-md"
         onClick={() => {
             setSuccess(false);
             startTransition(async () => {
               await EnrollinCourse(id);
               setSuccess(true);
+              
             });
           }}
       >
@@ -27,9 +40,4 @@ const EnrollButton = (course: Course) => {
         <div className="pl-1">
           <ArrowRight />
         </div>
-      </button>
-    </div>
-  );
-};
-
-export default EnrollButton;
+      </button> */}
